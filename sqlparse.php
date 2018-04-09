@@ -44,7 +44,7 @@ class CreateSqlParser
         $ret['table_name'] = $matches[1];
 
         //解析字段，推荐个在线正则网站 https://regexr.com/
-        $pattern = "#(.+)`(.+)` ([^\s]+)(.+),#i";
+        $pattern = "#(.*)`(.+)` ([^\s]+)(.+),#i";
         preg_match_all($pattern, $sql, $matches);
         $ret['list'] = [];
         if (empty($matches[0])) {
